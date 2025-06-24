@@ -1,3 +1,25 @@
-service_2/venv/
+# Python
 *.pyc
 __pycache__/
+.venv/
+
+# Go
+*.exe
+*.out
+*.test
+
+# Logs
+*.log
+
+# Docker
+*.pid
+
+# OS/Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Ignore test artifacts
+test-results/
+coverage/

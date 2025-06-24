@@ -10,6 +10,9 @@ services:
       interval: 10s
       timeout: 3s
       retries: 3
+    restart: always
+    networks:
+      - app-network
 
   service2:
     build:
@@ -22,6 +25,9 @@ services:
       interval: 10s
       timeout: 3s
       retries: 3
+    restart: always
+    networks:
+      - app-network
 
   nginx:
     build:
@@ -32,3 +38,10 @@ services:
     depends_on:
       - service1
       - service2
+    restart: always
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
